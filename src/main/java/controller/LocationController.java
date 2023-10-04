@@ -10,7 +10,6 @@ public class LocationController {
     private final LocationService locationService;
 
     public LocationController() {
-
         this.locationService = new LocationService(LocationDatabase.getInstance());
     }
 
@@ -24,5 +23,9 @@ public class LocationController {
 
     public Set<Location> getAllLocations() {
         return locationService.getAllLocations();
+    }
+
+    public Location getLocationByName(String cityName) {
+        return locationService.getLocationByName(cityName);
     }
 }

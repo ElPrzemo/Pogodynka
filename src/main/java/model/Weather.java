@@ -7,19 +7,17 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-    public class Weather {
-        private double temperature;
-        private double pressure;
-        private double humidity;
-        private double windDirection;
-        private int windSpeed;
-        private String locationWeather;
-        private LocalDate date;
-
+public class Weather {
+    private double temperature;
+    private double pressure;
+    private double humidity;
+    private int windSpeed;
+    private LocalDate date;
 
     @Override
     public String toString() {
@@ -28,8 +26,7 @@ import java.time.LocalDate;
                 ", pressure=" + pressure + "hPa" +
                 ", humidity=" + humidity + "%" +
                 ", windSpeed=" + windSpeed + " km/h" +
-                ", locationWeather='" + locationWeather + '\'' +
                 ", date=" + date +
                 '}';
     }
-    }
+}

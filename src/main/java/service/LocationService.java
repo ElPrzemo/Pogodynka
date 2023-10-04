@@ -23,5 +23,13 @@ public class LocationService {
     public Set<Location> getAllLocations() {
         return locationRepository.getAllLocations();
     }
-}
 
+    public Location getLocationByName(String cityName) {
+        for (Location location : locationRepository.getAllLocations()) {
+            if (location.getCity().equalsIgnoreCase(cityName)) {
+                return location;
+            }
+        }
+        return null; // Jeśli nie znaleziono lokalizacji o podanej nazwie miasta
+    }
+}

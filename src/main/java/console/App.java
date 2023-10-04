@@ -1,51 +1,56 @@
 package console;
 
+import commonDB.WeatherRequestRepository;
+import controller.LocationController;
+import service.WeatherService;
+
 import java.util.Scanner;
 
-
 public class App {
-
-    private static SubMenuOne subMenuOne = new SubMenuOne();
-
     public static void main(String[] args) {
+        LocationController locationController = new LocationController();
+        WeatherService weatherService = new WeatherService(WeatherDBRepository.getInstance()); // Przekazanie odpowiedniego argumentu
+        WeatherRequestRepository weatherRequestRepository = new WeatherRequestRepository();
+
+        SubMenuOne subMenuOne = new SubMenuOne(locationController);
+        SubMenuTwo subMenuTwo = new SubMenuTwo(weatherService, locationController, weatherRequestRepository);
+
         run();
     }
 
     public static void run() {
-        displayMenu();
-
         Scanner scanner = new Scanner(System.in);
-        int choice;
 
-        do {
+        while (true) {
             displayMenu();
-            choice = scanner.nextInt();
 
-            switch (choice) {
-                case 1:
+            if (scanner.hasNextInt()) {
+                int choice = scanner.nextInt();
 
-                    subMenuOne.runSubMenuOne();
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
+                if (choice >= 1 && choice <= 3) {
+                    switch (choice) {
+                        case 1:
+                            subMenuOne.runSubMenuOne();
+                            break;
+                        case 2:
+                            subMenuTwo.runSubMenuTwo();
+                            break;
+                        case 3:
+                            // Obsługa wyboru 3 (Statystyki)
+                            break;
+                    }
+                } else if (choice == 4) {
                     System.out.println("Wyjście z programu.");
-                    break;
-                default:
+                    return; // Zakończ program po obsłudze opcji 4
+                } else {
                     System.out.println("Nieprawidłowa opcja. Spróbuj ponownie.");
+                }
+            } else {
+                System.out.println("Nieprawidłowa opcja. Spróbuj ponownie.");
+                scanner.next(); // Pobierz nieprawidłowy token, aby uniknąć zapętlenia
             }
-        } while (choice > 0 && choice < 5);
-
-        scanner.close();
+        }
     }
-
 
     public static void displayMenu() {
         System.out.println("***************************************");
@@ -57,8 +62,7 @@ public class App {
         System.out.println("1. Edycja lokalizacji.");
         System.out.println("2. Sprawdź pogodę.");
         System.out.println("3. Statystyki.");
-        System.out.println("4. Zapis do pliku.");
-        System.out.println("5. Wyłącz program.");
+        System.out.println("4. Wyjście z programu.");
         System.out.println();
         System.out.println("***************************************");
         System.out.println("Mam nadzieje że Ci się spodoba :) ");
@@ -66,7 +70,3 @@ public class App {
         System.out.println();
     }
 }
-
-
-
-

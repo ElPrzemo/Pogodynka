@@ -12,18 +12,18 @@ public class CityAddMenu {
 
         System.out.println("*********************");
         System.out.println("Wpisz miasto:");
-        String cityName = scanner.nextLine();
+        String cityName = scanner.nextLine().toLowerCase(); // Konwertuj na małe litery
         System.out.println("*********************");
 
         Location location = LocationDataFetcher.fetchLocationData(cityName);
 
         if (location != null) {
-            System.out.println("*********************");
+            System.out.println();
             System.out.println("Wprowadzone miasto: " + location.getCity());
             System.out.println("Wprowadzony kraj: " + location.getCountry());
             System.out.println("Wprowadzona długość geograficzna: " + location.getLongitude());
             System.out.println("Wprowadzona szerokość geograficzna: " + location.getLatitude());
-            System.out.println("*********************");
+            System.out.println();
 
             LocationDatabase locationDatabase = LocationDatabase.getInstance();
             locationDatabase.addLocation(location);
