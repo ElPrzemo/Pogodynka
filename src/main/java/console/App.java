@@ -1,34 +1,40 @@
 package console;
 
-import commonDB.WeatherRequestRepository;
+import commonDB.WeatherDatabase;
+import console.SubMenuOne;
+import console.SubMenuTwo;
 import controller.LocationController;
 import service.WeatherService;
-
+import commonDB.WeatherRequestRepository;
 import java.util.Scanner;
 
+
 public class App {
+    private static SubMenuOne subMenuOne;
+    private static SubMenuTwo subMenuTwo;
+
     public static void main(String[] args) {
         LocationController locationController = new LocationController();
-        WeatherService weatherService = new WeatherService(WeatherDBRepository.getInstance()); // Przekazanie odpowiedniego argumentu
+        WeatherService weatherService = new WeatherService(WeatherDatabase.getInstance());
         WeatherRequestRepository weatherRequestRepository = new WeatherRequestRepository();
 
-        SubMenuOne subMenuOne = new SubMenuOne(locationController);
-        SubMenuTwo subMenuTwo = new SubMenuTwo(weatherService, locationController, weatherRequestRepository);
+        subMenuOne = new SubMenuOne(locationController);
+        subMenuTwo = new SubMenuTwo(weatherService, locationController, weatherRequestRepository);
 
-        run();
+        uruchom();
     }
 
-    public static void run() {
+    public static void uruchom() {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            displayMenu();
+            wyswietlMenu();
 
             if (scanner.hasNextInt()) {
-                int choice = scanner.nextInt();
+                int wybor = scanner.nextInt();
 
-                if (choice >= 1 && choice <= 3) {
-                    switch (choice) {
+                if (wybor >= 1 && wybor <= 3) {
+                    switch (wybor) {
                         case 1:
                             subMenuOne.runSubMenuOne();
                             break;
@@ -39,7 +45,7 @@ public class App {
                             // Obsługa wyboru 3 (Statystyki)
                             break;
                     }
-                } else if (choice == 4) {
+                } else if (wybor == 4) {
                     System.out.println("Wyjście z programu.");
                     return; // Zakończ program po obsłudze opcji 4
                 } else {
@@ -52,7 +58,7 @@ public class App {
         }
     }
 
-    public static void displayMenu() {
+    public static void wyswietlMenu() {
         System.out.println("***************************************");
         System.out.println("Witam Cię w naszym programie pogodowym!");
         System.out.println("***************************************");

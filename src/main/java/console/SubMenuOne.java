@@ -1,17 +1,18 @@
 package console;
 
-import commonDB.LocationDatabase;
 import controller.LocationController;
 import model.Location;
 import util.LocationDataFetcher;
 
 import java.util.List;
-import java.util.Set;
 import java.util.Scanner;
 
-
 public class SubMenuOne {
-    private LocationController locationController = new LocationController();
+    private LocationController locationController;
+
+    public SubMenuOne(LocationController locationController) {
+        this.locationController = locationController;
+    }
 
     public void runSubMenuOne() {
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +26,7 @@ public class SubMenuOne {
 
                 switch (choice) {
                     case 1:
-                        Location addedLocation = CityAddMenu.addLocation();
+                        addLocation();
                         break;
                     case 2:
                         deleteLocation();
@@ -50,7 +51,7 @@ public class SubMenuOne {
         } while (choice != 5);
     }
 
-    public static void displaySubMenuOneOptions() {
+    public void displaySubMenuOneOptions() {
         System.out.println("***************************************");
         System.out.println("***************************************");
         System.out.println();
@@ -67,17 +68,21 @@ public class SubMenuOne {
         System.out.println();
     }
 
-    private void displayAllLocations() {
-        Set<Location> allLocations = locationController.getAllLocations();
-        System.out.println("Wszystkie lokalizacje:");
+    private void addLocation() {
+        Location addedLocation = CityAddMenu.addLocation();
+        locationController.addLocation(addedLocation);
+        System.out.println("Lokalizacja została dodana.");
+    }
 
-        for (Location location : allLocations) {
+    private void displayAllLocations() {
+        System.out.println("Wszystkie lokalizacje:");
+        locationController.getAllLocations().forEach(location -> {
             System.out.println("Miasto: " + location.getCity());
             System.out.println("Kraj: " + location.getCountry());
             System.out.println("Długość geograficzna: " + location.getLongitude());
             System.out.println("Szerokość geograficzna: " + location.getLatitude());
             System.out.println();
-        }
+        });
     }
 
     private void deleteLocation() {
@@ -85,7 +90,6 @@ public class SubMenuOne {
         System.out.println("Wpisz miasto lokalizacji do usunięcia:");
         String cityName = scanner.nextLine();
 
-        LocationController locationController = new LocationController();
         Location locationToDelete = locationController.getLocationByName(cityName);
 
         if (locationToDelete != null) {
@@ -98,7 +102,7 @@ public class SubMenuOne {
 
     private void displayCityCheatsheet() {
         System.out.println("Miasta-ściągawka:");
-        List<Location> allLocations = LocationDataFetcher.fetchAllLocations("C:\\Users\\przem\\IdeaProjects\\PROJEKT\\WeatherAppTest\\Pogodynka\\src\\main\\resources\\city.list.json");
+        List<Location> allLocations = LocationDataFetcher.fetchAllLocations("Ścieżka_do_pliku_json");
 
         for (Location location : allLocations) {
             System.out.println(location.getCity());

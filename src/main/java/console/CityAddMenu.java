@@ -15,6 +15,15 @@ public class CityAddMenu {
         String cityName = scanner.nextLine().toLowerCase(); // Konwertuj na małe litery
         System.out.println("*********************");
 
+        LocationDatabase locationDatabase = LocationDatabase.getInstance();
+
+        // Sprawdź, czy lokalizacja już istnieje w bazie
+        Location existingLocation = locationDatabase.getLocationByName(cityName);
+        if (existingLocation != null) {
+            System.out.println("Lokalizacja o nazwie miasta '" + cityName + "' już istnieje w bazie danych.");
+            return existingLocation;
+        }
+
         Location location = LocationDataFetcher.fetchLocationData(cityName);
 
         if (location != null) {
@@ -25,7 +34,6 @@ public class CityAddMenu {
             System.out.println("Wprowadzona szerokość geograficzna: " + location.getLatitude());
             System.out.println();
 
-            LocationDatabase locationDatabase = LocationDatabase.getInstance();
             locationDatabase.addLocation(location);
         } else {
             System.out.println("Nie znaleziono lokalizacji o podanej nazwie miasta.");

@@ -2,6 +2,7 @@ package console;
 
 import commonDB.WeatherDBRepository;
 import commonDB.WeatherRequestRepository;
+import fileMenager.FileManager;
 import model.Location;
 import model.Weather;
 import service.WeatherService;
@@ -132,6 +133,6 @@ public class SubMenuTwo {
     }
 
     private void saveResultsToFile() {
-        // Implementacja zapisu wyników do pliku
+        FileManager.saveWeatherData(weatherRequestRepository.getAllWeatherRequests());
     }
 }
