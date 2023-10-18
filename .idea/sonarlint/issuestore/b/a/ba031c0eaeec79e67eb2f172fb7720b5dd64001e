@@ -1,0 +1,26 @@
+
+Š
+java:S1192>"hDefine a constant instead of duplicating this literal "***************************************" 4 times.( ØÂ‰şÿÿÿÿ8¨Ÿà¯1
+C	java:S131%""Add a default case to this switch.(ñêˆºıÿÿÿÿ8é¾Íò°1
+L	java:S1061"+Replace this use of System.out by a logger.(£óó´úÿÿÿÿ8³Ÿà¯1
+L	java:S1064"+Replace this use of System.out by a logger.(ã»¤½üÿÿÿÿ8³Ÿà¯1
+L	java:S1067"+Replace this use of System.out by a logger.(ã»¤½üÿÿÿÿ8³Ÿà¯1
+L	java:S106>"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8³Ÿà¯1
+L	java:S106?"+Replace this use of System.out by a logger.(©ÉúŒÿÿÿÿÿ8³Ÿà¯1
+L	java:S106@"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8³Ÿà¯1
+L	java:S106A"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8³Ÿà¯1
+G	java:S106B"+Replace this use of System.out by a logger.(¹À¬•8³Ÿà¯1
+L	java:S106C"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8³Ÿà¯1
+L	java:S106D"+Replace this use of System.out by a logger.(ùàšîıÿÿÿÿ8³Ÿà¯1
+L	java:S106E"+Replace this use of System.out by a logger.(²¡ÓÚşÿÿÿÿ8³Ÿà¯1
+L	java:S106F"+Replace this use of System.out by a logger.(üÖ†“ıÿÿÿÿ8³Ÿà¯1
+G	java:S106G"+Replace this use of System.out by a logger.(ó‹ß“8³Ÿà¯1
+L	java:S106H"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8³Ÿà¯1
+L	java:S106I"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8³Ÿà¯1
+G	java:S106J"+Replace this use of System.out by a logger.(®–¾ö8ï¾Íò°1
+L	java:S106K"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8ï¾Íò°1
+L	java:S106L"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ï¾Íò°1
+o
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ƒ·&8Éêõ°1
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(íØ¥ûÿÿÿÿ8Éêõ°1

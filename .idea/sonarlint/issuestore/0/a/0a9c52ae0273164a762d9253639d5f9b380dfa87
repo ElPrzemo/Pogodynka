@@ -1,0 +1,46 @@
+
+Š
+java:S11926"hDefine a constant instead of duplicating this literal "***************************************" 4 times.( ØÂ‰şÿÿÿÿ8ûÔ½ô°1
+G	java:S106("+Replace this use of System.out by a logger.(òç£ï8•Õ½ô°1
+L	java:S106+"+Replace this use of System.out by a logger.(ã»¤½üÿÿÿÿ8•Õ½ô°1
+L	java:S106."+Replace this use of System.out by a logger.(ã»¤½üÿÿÿÿ8•Õ½ô°1
+L	java:S1066"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8–Õ½ô°1
+L	java:S1067"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8–Õ½ô°1
+L	java:S1068"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8–Õ½ô°1
+G	java:S1069"+Replace this use of System.out by a logger.(¹À¬•8–Õ½ô°1
+L	java:S106:"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8–Õ½ô°1
+G	java:S106;"+Replace this use of System.out by a logger.(¶Óù—8–Õ½ô°1
+G	java:S106<"+Replace this use of System.out by a logger.(ë×Æ«8—Õ½ô°1
+G	java:S106="+Replace this use of System.out by a logger.(·¨Á±8—Õ½ô°1
+L	java:S106>"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8—Õ½ô°1
+L	java:S106?"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8—Õ½ô°1
+L	java:S106@"+Replace this use of System.out by a logger.( ØÂ‰şÿÿÿÿ8—Õ½ô°1
+L	java:S106A"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8—Õ½ô°1
+L	java:S106F"+Replace this use of System.out by a logger.(è­ƒçøÿÿÿÿ8ŒÄÓô°1
+L	java:S106H"+Replace this use of System.out by a logger.(£Öç¬şÿÿÿÿ8ÄÓô°1
+G	java:S106J"+Replace this use of System.out by a logger.(åú±¼8ÄÓô°1
+G	java:S106R"+Replace this use of System.out by a logger.(´ª°8ÄÓô°1
+G	java:S106\"+Replace this use of System.out by a logger.(¹½Ã8ÄÓô°1
+F	java:S106]"+Replace this use of System.out by a logger.(Ã«Å38ÄÓô°1
+L	java:S106^"+Replace this use of System.out by a logger.(†ÌÎÛùÿÿÿÿ8ÄÓô°1
+G	java:S106_"+Replace this use of System.out by a logger.(ûñ•8ÄÓô°1
+G	java:S106`"+Replace this use of System.out by a logger.(’‹Ñ8ÄÓô°1
+G	java:S106a"+Replace this use of System.out by a logger.(÷ØÖı8ÄÓô°1
+G	java:S106b"+Replace this use of System.out by a logger.(‘ôŒ¡8ÄÓô°1
+F	java:S106d"+Replace this use of System.out by a logger.(øØ58ÄÓô°1
+G	java:S106g"+Replace this use of System.out by a logger.(ÑËË‘8ÄÓô°1
+G	java:S106j"+Replace this use of System.out by a logger.(±¾§8ÄÓô°1
+L	java:S106p"+Replace this use of System.out by a logger.(è­ƒçøÿÿÿÿ8‘ÄÓô°1
+L	java:S106r"+Replace this use of System.out by a logger.(£Öç¬şÿÿÿÿ8’ÄÓô°1
+G	java:S106t"+Replace this use of System.out by a logger.(åú±¼8’ÄÓô°1
+G	java:S106|"+Replace this use of System.out by a logger.(´ª°8’ÄÓô°1
+H	java:S106†"+Replace this use of System.out by a logger.(óÒŞ8“ÄÓô°1
+G	java:S106‡"+Replace this use of System.out by a logger.(Ã«Å38“ÄÓô°1
+M	java:S106ˆ"+Replace this use of System.out by a logger.(†ÌÎÛùÿÿÿÿ8“ÄÓô°1
+M	java:S106‰"+Replace this use of System.out by a logger.(Ü“Ì–ùÿÿÿÿ8“ÄÓô°1
+M	java:S106Š"+Replace this use of System.out by a logger.(ÖÑñÍÿÿÿÿÿ8“ÄÓô°1
+G	java:S106Œ"+Replace this use of System.out by a logger.(øØ58”ÄÓô°1
+H	java:S106"+Replace this use of System.out by a logger.(ÑËË‘8”ÄÓô°1
+H	java:S106’"+Replace this use of System.out by a logger.(±¾§8”ÄÓô°1
+U
+java:S1068"3Remove this unused "weatherDatabase" private field.(‚‰Á¦øÿÿÿÿ8ŸÕ½ô°1

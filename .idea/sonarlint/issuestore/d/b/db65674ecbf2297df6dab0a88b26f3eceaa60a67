@@ -1,0 +1,11 @@
+
+ƒ
+java:S14888"fImmediately return this expression instead of assigning it to the temporary variable "averageWeather".(´øÂ›8½«¼ô°1
+…
+java:S1488n"hImmediately return this expression instead of assigning it to the temporary variable "temperatureStats".(‰ïÌç8Ş“›ó°1
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©‰â^8ê×”ó°1
+M
+java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ãÄìõ°1
+M
+java:S1128
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ãÄìõ°1
